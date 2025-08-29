@@ -15,7 +15,7 @@ namespace AbhaApi.DataLayer
 
         public async Task<IEnumerable<FormResponse>> GetForm(QueryFilter<FormResponse> filter)
         {
-            var query = Query.Form.getForm;
+            var query = Query.Form.GetTest;
             var form = new DynamicParameters();
             query = BuildQuery(filter, query, ref form);
             return await conn.QueryAsync<FormResponse>(query, form);
